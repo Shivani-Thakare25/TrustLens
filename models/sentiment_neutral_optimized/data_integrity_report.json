@@ -1,0 +1,16 @@
+{
+  "dataset": "C:\\Users\\admin\\Desktop\\Academics\\All year projects\\Trustlens_AIML\\Working\\Trustlens1\\TrustLens\\data\\processed\\sentiment_reviews_features.parquet",
+  "random_state": 42,
+  "grouping_key": "normalized_combined_text",
+  "outer_split": "StratifiedGroupKFold",
+  "inner_split": "StratifiedGroupKFold",
+  "outer_group_overlap": 0,
+  "outer_exact_text_overlap": 0,
+  "inner_group_overlap": 0,
+  "inner_exact_text_overlap": 0,
+  "test_set_used_for_tuning": false,
+  "test_set_used_for_model_selection": false,
+  "synthetic_data_used": false,
+  "tfidf_fitted_on_test": false,
+  "final_test_evaluated_after_selection": true
+}

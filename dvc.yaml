@@ -1,0 +1,23 @@
+# Place your raw dataset at data/raw/reviews.csv, then: dvc add data/raw/reviews.csv && dvc repro
+stages:
+  validate:
+    cmd: python scripts/validate_data.py data/raw/reviews.csv --out reports/data_validation.json
+    deps: [scripts/validate_data.py, src/data, data/raw/reviews.csv]
+    outs: [reports/data_validation.json]
+  preprocess:
+    cmd: python scripts/preprocess.py data/raw/reviews.csv --out data/processed/reviews.csv --stats reports/cleaning_stats.json
+    deps: [scripts/preprocess.py, src/data, configs/data_config.yaml, data/raw/reviews.csv]
+    outs: [data/processed/reviews.csv, reports/cleaning_stats.json]
+  features:
+    cmd: python scripts/build_features.py data/processed/reviews.csv --out data/processed/text_features.csv
+    deps: [scripts/build_features.py, src/features, data/processed/reviews.csv]
+    outs: [data/processed/text_features.csv]
+  train:
+    cmd: python scripts/train.py data/processed/reviews.csv --out artifacts/model --no-tracking
+    deps: [scripts/train.py, src/models, src/features, src/explainability, data/processed/reviews.csv, configs/model_config.yaml]
+    params: [configs/config.yaml:random_seed]
+    outs: [artifacts/model]
+  evaluate:
+    cmd: python scripts/evaluate.py --model-dir artifacts/model --out reports/evaluation
+    deps: [scripts/evaluate.py, src/models/evaluate.py, artifacts/model]
+    outs: [reports/evaluation]

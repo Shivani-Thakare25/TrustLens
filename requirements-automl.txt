@@ -1,0 +1,3 @@
+autogluon.tabular>=1.0
+h2o>=3.44
+# auto-sklearn requires Linux/WSL2 and an older Python; install separately.

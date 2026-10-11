@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "leakage_checks": {
+    "review_group_overlap": 0,
+    "exact_combined_text_overlap": 0
+  },
+  "train_rows": 89355,
+  "test_rows": 22341,
+  "train_percentage": 79.99838848302535,
+  "test_percentage": 20.001611516974645
+}

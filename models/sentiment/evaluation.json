@@ -1,0 +1,23 @@
+{
+    "model": "logistic_regression",
+    "accuracy": 0.8670546105640108,
+    "precision": 0.8991942656081422,
+    "recall": 0.8670546105640108,
+    "f1": 0.880279018693569,
+    "dataset_rows": 111696,
+    "random_state": 42,
+    "test_size": 0.2,
+    "features": {
+        "tfidf": true,
+        "ngram_range": [
+            1,
+            2
+        ],
+        "max_features": 60000
+    },
+    "sentiment_classes": [
+        "negative",
+        "neutral",
+        "positive"
+    ]
+}

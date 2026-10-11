@@ -1,0 +1,122 @@
+[
+  {
+    "feature": "hand__exclaim_count",
+    "importance": 1.154573191015385
+  },
+  {
+    "feature": "hand__promo_ratio",
+    "importance": 0.9977370008921745
+  },
+  {
+    "feature": "hand__generic_phrase_count",
+    "importance": 0.7119430546439158
+  },
+  {
+    "feature": "hand__word_count",
+    "importance": 0.6847113238769169
+  },
+  {
+    "feature": "hand__char_len",
+    "importance": 0.6444065070965489
+  },
+  {
+    "feature": "hand__urgency_count",
+    "importance": 0.6157322332285144
+  },
+  {
+    "feature": "hand__caps_ratio",
+    "importance": 0.46719931119400915
+  },
+  {
+    "feature": "hand__punct_ratio",
+    "importance": 0.3969613470572703
+  },
+  {
+    "feature": "hand__sentence_count",
+    "importance": 0.37077486674943655
+  },
+  {
+    "feature": "hand__superlative_count",
+    "importance": 0.2622538546265634
+  },
+  {
+    "feature": "hand__lexical_diversity",
+    "importance": 0.228805223859514
+  },
+  {
+    "feature": "hand__repeated_word_ratio",
+    "importance": 0.22880522385951377
+  },
+  {
+    "feature": "word__and top",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__buy today",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__all",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__all the",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__today",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__today unbelievable",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__top",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__top notch",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__unbelievable performance",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__performance",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__way note",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__way",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__performance and",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__notch design",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__design five",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__design",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__five",
+    "importance": 0.06707644274333828
+  },
+  {
+    "feature": "word__five stars",
+    "importance": 0.06707644274333828
+  }
+]

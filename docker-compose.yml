@@ -1,0 +1,47 @@
+# Usage: docker compose up --build            (api + streamlit + gradio)
+#        docker compose --profile mlops up    (adds an MLflow tracking server)
+# Train a model on the host first (artifacts/model must exist); it is mounted read-only.
+x-trustlens: &trustlens
+  build: .
+  image: trustlens:latest
+  volumes:
+    - ./artifacts:/app/artifacts:ro
+  environment:
+    TRUSTLENS_MODEL_DIR: /app/artifacts/model
+    TRUSTLENS_CORS_ORIGINS: ${TRUSTLENS_CORS_ORIGINS:-http://localhost:8501}
+
+services:
+  api:
+    <<: *trustlens
+    ports: ["8000:8000"]
+    command: ["uvicorn", "api.fastapi_app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  streamlit:
+    <<: *trustlens
+    ports: ["8501:8501"]
+    command: ["streamlit", "run", "streamlit_app/app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health')"]
+      interval: 30s
+
+  gradio:
+    <<: *trustlens
+    ports: ["7860:7860"]
+    environment:
+      TRUSTLENS_MODEL_DIR: /app/artifacts/model
+      GRADIO_PORT: "7860"
+    command: ["python", "-m", "gradio_app.app"]
+
+  mlflow:
+    profiles: ["mlops"]
+    image: python:3.11-slim
+    ports: ["5000:5000"]
+    volumes:
+      - mlflow-data:/mlflow
+    command: >
+      sh -c "pip install --no-cache-dir mlflow &&
+             mlflow server --host 0.0.0.0 --port 5000
+             --backend-store-uri sqlite:////mlflow/mlflow.db --default-artifact-root /mlflow/artifacts"
+
+volumes:
+  mlflow-data:

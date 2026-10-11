@@ -1,0 +1,21 @@
+{
+  "model_name": "logistic_regression",
+  "label_semantics": "synthetic",
+  "n_test": 60,
+  "metrics": {
+    "threshold": 0.05,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "brier": 0.0007236785140466918,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0
+  },
+  "plots": {
+    "confusion_matrix": "C:\\Users\\admin\\Desktop\\Academics\\All year projects\\Trustlens_AIML\\Working\\Trustlens1\\TrustLens\\reports\\evaluation\\confusion_matrix.png",
+    "roc": "C:\\Users\\admin\\Desktop\\Academics\\All year projects\\Trustlens_AIML\\Working\\Trustlens1\\TrustLens\\reports\\evaluation\\roc.png",
+    "pr": "C:\\Users\\admin\\Desktop\\Academics\\All year projects\\Trustlens_AIML\\Working\\Trustlens1\\TrustLens\\reports\\evaluation\\pr.png",
+    "calibration": "C:\\Users\\admin\\Desktop\\Academics\\All year projects\\Trustlens_AIML\\Working\\Trustlens1\\TrustLens\\reports\\evaluation\\calibration.png"
+  }
+}

@@ -1,0 +1,12 @@
+# Holds the trained model directory (artifacts/model). Needs ReadOnlyMany/ReadWriteMany support if you run
+# more than one replica; populate it with your trained artifacts before starting the pods.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: trustlens-model-pvc
+  namespace: trustlens
+spec:
+  accessModes: [ReadWriteMany]
+  resources:
+    requests:
+      storage: 1Gi

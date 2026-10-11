@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+mlruns/
+wandb/
+artifacts/*
+!artifacts/model/
+!artifacts/model/**
+!artifacts/.gitkeep
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/*/.gitkeep
+.ipynb_checkpoints/
+mlflow.db
+
+
+# Large models kept locally for now
+/models/fake_review/random_forest.joblib
+/models/fake_review_advanced/random_forest.joblib
+
+# Local datasets
+/data/raw/
+data/processed/
+
+
+
+gradio_app/*.lnk
+pytest_output.txt
+
+artifacts/model/test_predictions.csv

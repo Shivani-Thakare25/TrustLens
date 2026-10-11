@@ -1,0 +1,29 @@
+{
+  "model": "logistic_regression_word_char_tfidf",
+  "split": {
+    "method": "StratifiedGroupKFold",
+    "train_ratio_target": 0.8,
+    "test_ratio_target": 0.2,
+    "random_state": 42,
+    "group_column": "_review_group"
+  },
+  "data": {
+    "rows_after_cleaning": 111696,
+    "exact_duplicates_removed": 58979,
+    "unique_review_groups": 10368,
+    "training_rows": 89355,
+    "testing_rows": 22341,
+    "train_test_group_overlap": 0,
+    "train_test_exact_text_overlap": 0
+  },
+  "metrics": {
+    "accuracy": 0.8773555346672038,
+    "weighted_precision": 0.8905744413364303,
+    "weighted_recall": 0.8773555346672038,
+    "weighted_f1": 0.8832662182905268,
+    "macro_precision": 0.7057690876680448,
+    "macro_recall": 0.7377384551612064,
+    "macro_f1": 0.7189352440544369
+  },
+  "classification_report": "              precision    recall  f1-score   support\n\n    negative       0.83      0.84      0.84      4243\n     neutral       0.34      0.45      0.38      1383\n    positive       0.95      0.92      0.94     16715\n\n    accuracy                           0.88     22341\n   macro avg       0.71      0.74      0.72     22341\nweighted avg       0.89      0.88      0.88     22341\n"
+}

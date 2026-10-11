@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trustlens-config
+  namespace: trustlens
+data:
+  TRUSTLENS_MODEL_DIR: /app/artifacts/model
+  TRUSTLENS_CORS_ORIGINS: https://trustlens.example.com

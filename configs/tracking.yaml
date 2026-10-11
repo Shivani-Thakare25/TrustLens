@@ -1,0 +1,6 @@
+mlflow:
+  enabled: true
+  experiment_name: trustlens
+wandb:
+  enabled: false   # also requires WANDB_API_KEY; training never fails if absent
+  project: trustlens

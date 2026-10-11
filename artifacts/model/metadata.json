@@ -1,0 +1,73 @@
+{
+  "model_name": "logistic_regression",
+  "model_version": "20261010154936",
+  "training_date": "2026-10-10T15:49:36.668451+00:00",
+  "dataset_version": "unversioned",
+  "label_semantics": "synthetic",
+  "feature_version": "v1",
+  "random_seed": 42,
+  "git_commit": null,
+  "threshold": 0.05,
+  "split_sizes": {
+    "train": 280,
+    "val": 60,
+    "test": 60
+  },
+  "selection_criterion": "validation PR-AUC",
+  "all_model_results": {
+    "logistic_regression": {
+      "status": "trained",
+      "tuning": null,
+      "train_seconds": 1.596728799981065,
+      "inference_ms_per_review": 4.15728500035281,
+      "threshold": 0.05,
+      "validation": {
+        "threshold": 0.05,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "brier": 0.0007096960831254843,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "test": {
+        "threshold": 0.05,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "brier": 0.000723678514046693,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      }
+    },
+    "random_forest": {
+      "status": "trained",
+      "tuning": null,
+      "train_seconds": 5.076659900019877,
+      "inference_ms_per_review": 10.941243334673345,
+      "threshold": 0.05,
+      "validation": {
+        "threshold": 0.05,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "brier": 0.0004303650206111832,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "test": {
+        "threshold": 0.05,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "brier": 0.00042249201988453494,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      }
+    }
+  }
+}

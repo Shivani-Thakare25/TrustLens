@@ -1,0 +1,8 @@
+raw_dir: data/raw
+processed_dir: data/processed
+random_seed: 42
+min_rating: 1
+max_rating: 5
+min_text_chars: 1
+max_text_chars: 20000
+label_semantics: unknown   # one of: true, weak, proxy, synthetic, unknown

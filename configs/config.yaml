@@ -1,0 +1,4 @@
+project: trustlens
+random_seed: 42
+model_dir: artifacts/model
+log_level: INFO

@@ -1,0 +1,4 @@
+opencv-python-headless>=4.9
+ultralytics>=8.1
+imagehash>=4.3
+Pillow>=10.2

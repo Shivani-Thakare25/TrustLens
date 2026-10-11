@@ -1,0 +1,5 @@
+models: [logistic_regression, random_forest, xgboost, lightgbm, catboost]
+threshold_objective: f1   # f1 | recall_constraint | precision_constraint; chosen on validation data only
+tune: false               # group-aware CV random search on training data (slower)
+tune_n_iter: 8
+save_reference_corpus: false   # opt-in: stores raw training text for similarity lookups
